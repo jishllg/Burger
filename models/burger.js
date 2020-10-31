@@ -6,12 +6,12 @@ var burger = {
             sendUp(result);
           });
     },
-    create: function(name) {
+    create: function(name, sendUp) {
         orm.insertOne(name, function(result) {
             sendUp(result);
         });
     },
-    devour: function(id) {
+    devour: function(id, sendUp) {
         orm.updateOne(id, function(result) {
             sendUp(result);
         });
