@@ -22,3 +22,5 @@ router.put("/api/devour/:id", function(req, res) {
       else { res.status(200).end(); }
     });
   });
+
+module.exports = router;
