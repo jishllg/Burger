@@ -5,8 +5,8 @@ let router = express.Router();
 
 router.get("/", function(req, res) {
     burger.list(function(data) {
-        console.log(data);
-        res.render("index", data);
+        let handlebarObject = {burgers: data}
+        res.render("index", handlebarObject);
     });
 });
 
